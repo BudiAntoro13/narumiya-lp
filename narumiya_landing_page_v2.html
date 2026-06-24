@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Narumiya — 大阪梅田のトータルチェンジ痩身サロン。骨格・内臓・習慣・心まで整える独自メソッドで、12年の実績。初回体験受付中。">
+<title>Narumiya — トータルチェンジ痩身サロン | 大阪梅田</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap&font-display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* ── Palette from staff photo + luxury feminin glowy ── */
+  --sky:        #B8D4E8;   /* seragam biru muda */
+  --sky-lt:     #E8F3FA;
+  --sky-dk:     #6FA3C4;
+  --pearl:      #F5F0F4;   /* putih-pearl */
+  --blush:      #EDD5E0;   /* blush pink */
+  --blush-md:   #D4A8BE;
+  --blush-dk:   #A06882;
+  --rose-glow:  #C97A98;
+  --gold:       #C9A86C;
+  --gold-lt:    #F0DEB8;
+  --gold-dk:    #8B6B3A;
+  --mauve:      #8C5F72;
+  --deep:       #2A1E26;
+  --white:      #FFFFFF;
+  --text-mid:   #6B4F5C;
+
+  /* ── Gradients ── */
+  --grad-btn:        linear-gradient(135deg, #C97A98 0%, #A06882 40%, #C9A86C 100%);
+  --grad-btn-hover:  linear-gradient(135deg, #D98AAA 0%, #B07892 40%, #D9B87C 100%);
+  --grad-hero:       linear-gradient(160deg, #1A1520 0%, #2D1F2A 50%, #1A2535 100%);
+  --grad-section:    linear-gradient(180deg, #F5F0F4 0%, #EDD5E0 100%);
+  --grad-gold:       linear-gradient(90deg, #C9A86C, #F0DEB8, #C9A86C);
+  --grad-glow-card:  linear-gradient(135deg, #FFFFFF 0%, #F5EEF6 50%, #EDD5E0 100%);
+  --grad-dark:       linear-gradient(160deg, #2A1E26 0%, #1C2B3A 100%);
+  --grad-rose-dk:    linear-gradient(135deg, #7A3050 0%, #A06882 100%);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--pearl);
+  color: var(--deep);
+  font-size: 15px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+body, html {
+  overflow-x: hidden;
+}
+
+/* ── GLOW UTILITY ──────────────────────────── */
+.glow-text {
+  background: var(--grad-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── CONTAINER ─────────────────────────────── */
+.container { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+
+/* ── TAG / EYEBROW ─────────────────────────── */
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  border: 1px solid var(--gold-lt);
+  border-radius: 2px;
+  padding: 3px 12px;
+  background: rgba(255,255,255,0.6);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.tag-dark {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(201,168,108,0.35);
+  color: var(--gold-lt);
+}
+
+/* ── GOLD DIVIDER ──────────────────────────── */
+.divider {
+  width: 48px; height: 1px;
+  background: var(--grad-gold);
+  margin: 12px auto 0;
+}
+
+/* ── CTA BUTTON ────────────────────────────── */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--grad-btn);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 16px 44px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 24px rgba(160,104,130,0.35);
+}
+.btn-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 60%);
+  border-radius: inherit;
+}
+.btn-cta:hover {
+  background: var(--grad-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(160,104,130,0.45);
+}
+.btn-cta svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; flex-shrink: 0; }
+.btn-cta-sub { font-size: 12px; color: var(--gold); margin-top: 10px; display: block; }
+
+/* ── STICKY BAR ─────────────────────────────── */
+.sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(30, 18, 28, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 100;
+  border-top: 1px solid rgba(201,168,108,0.25);
+}
+.sticky-bar span { color: var(--gold-lt); font-size: 13px; font-weight: 300; letter-spacing: 0.05em; }
+.sticky-bar .btn-cta { padding: 11px 28px; font-size: 14px; box-shadow: 0 2px 14px rgba(160,104,130,0.4); }
+
+/* ── HERO ──────────────────────────────────── */
+.hero {
+    background: 
+    linear-gradient(160deg, rgba(121, 111, 133, 0.85) 0%, rgba(255, 255, 255, 0.85) 50%, rgba(220, 152, 206, 0.85) 100%),
+    url('all-staff.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,120,150,0.12) 0%, transparent 70%);
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 40px; left: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(100,160,200,0.10) 0%, transparent 70%);
+}
+.hero-inner {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 80px 24px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: end;
+  position: relative; z-index: 1;
+}
+.hero-copy { padding-bottom: 64px; }
+.hero-eyebrow {
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  color: rgba(75, 75, 75, 0.85);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.hero-copy {
+  padding-bottom: 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 28px; height: 1px;
+  background: rgba(121, 111, 133, 0.85);
+}
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 35px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+.hero h1 em {
+  font-style: normal;
+  display: block;
+  background: var(--deep);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+.hero-desc {
+  font-size: 20px;
+  color: var(--deep);
+  line-height: 1.95;
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+.hero-desc strong { color: rgba(234, 89, 164, 0.9); font-weight: 500; }
+.hero-photo {
+  height: 400px;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+.hero-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(30,18,28,0.4) 0%, transparent 60%);
+  border-radius: inherit;
+}
+
+/* hero canvas */
+
+#hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── BADGES STRIP ──────────────────────────── */
+.badges-strip {
+  background: linear-gradient(90deg, #2A1E26 0%, #1C2B3A 50%, #2A1E26 100%);
+  padding: 16px 24px;
+  border-top: 1px solid rgba(201,168,108,0.2);
+  border-bottom: 1px solid rgba(201,168,108,0.2);
+}
+.badges-row {
+  max-width: 740px;
+  margin: 0 auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.badge {
+  background: rgba(255,255,255,0.06);
+  color: var(--gold-lt);
+  border: 1px solid rgba(201,168,108,0.25);
+  border-radius: 3px;
+  font-size: 11px;
+  padding: 5px 14px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+/* ── SECTION BASE ──────────────────────────── */
+.section { padding: 80px 0; }
+.section-pearl { background: var(--pearl); }
+.section-white { background: var(--white); }
+.section-blush { background: linear-gradient(180deg, var(--pearl) 0%, var(--blush) 100%); }
+.section-dark { background: var(--grad-dark); }
+.section-rose { background: var(--grad-rose-dk); }
+
+.section-header { text-align: center; margin-bottom: 52px; }
+.section-header h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--deep);
+  margin-top: 10px;
+  letter-spacing: 0.03em;
+}
+.section-dark .section-header h2 { color: #fff; }
+.section-rose .section-header h2 { color: #fff; }
+.section-blush .section-header h2 { color: var(--deep); }
+
+/* ── STATS ─────────────────────────────────── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.stat-card {
+  text-align: center;
+  background: var(--grad-glow-card);
+  border: 1px solid var(--blush);
+  border-radius: 16px;
+  padding: 32px 16px;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: -20px; right: -20px;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,168,108,0.12) 0%, transparent 70%);
+}
+.stat-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 34px;
+  font-weight: 600;
+  display: block;
+  line-height: 1.1;
+  background: var(--grad-btn);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label { font-size: 12px; color: var(--text-mid); margin-top: 8px; line-height: 1.5; }
+
+/* ── PAIN CHECKLIST ────────────────────────── */
+.pain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.pain-item {
+  background: var(--white);
+  border: 1px solid var(--blush);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--deep);
+  line-height: 1.55;
+}
+.pain-check {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blush) 0%, var(--blush-md) 100%);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.pain-check svg { width: 11px; height: 11px; stroke: var(--mauve); stroke-width: 2.5; fill: none; }
+
+.callout {
+  background: linear-gradient(135deg, #fff 0%, var(--blush) 100%);
+  border-left: 3px solid var(--rose-glow);
+  border-radius: 0 14px 14px 0;
+  padding: 22px 26px;
+  margin-top: 24px;
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--deep);
+}
+
+/* ── REASON GRID ───────────────────────────── */
+.reason-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.reason-item {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 26px 22px;
+  border: 1px solid var(--blush);
+  position: relative;
+  overflow: hidden;
+}
+.reason-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 60px; height: 60px;
+  border-radius: 50% 0 14px 0;
+  background: var(--sky-lt);
+  opacity: 0.5;
+}
+.reason-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 14px;
+  background: var(--grad-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.reason-title { font-size: 15px; font-weight: 700; color: var(--deep); margin-bottom: 8px; }
+.reason-body { font-size: 13px; color: var(--text-mid); line-height: 1.75; }
+
+/* ── PILLARS ───────────────────────────────── */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.pillar-card {
+  text-align: center;
+  padding: 28px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--blush);
+  background: var(--grad-glow-card);
+  transition: transform 0.2s;
+}
+.pillar-card:hover { transform: translateY(-3px); }
+.pillar-icon {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blush) 0%, var(--sky-lt) 100%);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 14px;
+  border: 1px solid var(--blush-md);
+}
+.pillar-icon svg { width: 22px; height: 22px; stroke: var(--mauve); fill: none; stroke-width: 1.5; }
+.pillar-title { font-size: 13px; font-weight: 700; color: var(--deep); margin-bottom: 6px; }
+.pillar-body { font-size: 12px; color: var(--text-mid); line-height: 1.65; }
+
+.transform-flow {
+  background: linear-gradient(135deg, var(--white) 0%, var(--blush) 100%);
+  border: 1px solid var(--blush-md);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.flow-node {
+  background: var(--white);
+  border: 1px solid var(--blush-md);
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-size: 13px;
+  color: var(--text-mid);
+  font-weight: 500;
+}
+.flow-arrow { color: var(--rose-glow); font-size: 16px; }
+.flow-node-final {
+  background: var(--grad-btn);
+  color: #fff;
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* ── TESTIMONIALS ──────────────────────────── */
+.testi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.testi-card {
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid var(--blush);
+  padding: 24px;
+}
+.testi-stars { font-size: 12px; margin-bottom: 12px; background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.testi-text { font-size: 14px; color: var(--deep); line-height: 1.85; margin-bottom: 12px; }
+.testi-name { font-size: 11px; color: var(--text-mid); font-weight: 500; letter-spacing: 0.06em; }
+
+.testi-highlight {
+  background: var(--grad-rose-dk);
+  border-radius: 14px;
+  padding: 32px 28px;
+  margin-top: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.testi-highlight::before {
+  content: '"';
+  position: absolute;
+  top: -10px; left: 16px;
+  font-size: 120px;
+  color: rgba(255,255,255,0.08);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+.testi-highlight p {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.9;
+  font-weight: 300;
+  position: relative; z-index: 1;
+}
+.testi-highlight span { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 14px; display: block; letter-spacing: 0.06em; }
+
+/* ── TESTIMONIAL CAROUSEL ────────────────────*/
+.carousel-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-top: 14px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 4px;
+}
+.testi-card-inner {
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid var(--blush);
+  overflow: hidden;
+}
+.testi-photo {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, var(--sky-lt) 0%, var(--blush) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--blush);
+  position: relative;
+  overflow: hidden;
+}
+.testi-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.testi-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text-mid);
+  font-size: 13px;
+}
+.testi-photo-placeholder .ph-icon {
+  width: 48px; height: 48px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.testi-photo-placeholder .ph-icon svg {
+  width: 22px; height: 22px;
+  stroke: var(--mauve); fill: none; stroke-width: 1.5;
+}
+.testi-body {
+  padding: 20px;
+}
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+.carousel-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--blush-md);
+  background: var(--white);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--mauve);
+  font-size: 16px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.carousel-btn:hover { background: var(--blush); }
+.carousel-dots {
+  display: flex;
+  gap: 6px;
+}
+.carousel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--blush-md);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.carousel-dot.active {
+  background: var(--rose-glow);
+  transform: scale(1.3);
+}
+.photo-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--blush);
+}
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ── PHOTO PLACEHOLDER ───────────────────────*/
+.photo-placeholder {
+  width: 100%;
+  background: linear-gradient(135deg, var(--sky-lt) 0%, var(--blush) 100%);
+  border: 2px dashed var(--blush-md);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text-mid);
+  font-size: 13px;
+}
+.ph-icon {
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.ph-icon svg { width: 20px; height: 20px; stroke: var(--mauve); fill: none; stroke-width: 1.5; }
+
+/* ── FOUNDER ─────────────────────────────────*/
+.founder-wrap {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 44px;
+  align-items: start;
+}
+.founder-copy h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.7;
+  margin: 12px 0 20px;
+  letter-spacing: 0.02em;
+}
+.founder-copy p { font-size: 14px; color: rgba(255,255,255,0.68); line-height: 1.95; margin-bottom: 14px; font-weight: 300; }
+.founder-copy strong { color: rgba(255,255,255,0.92); font-weight: 500; }
+
+/* ── FLOW STEPS ──────────────────────────────*/
+.flow-steps { display: flex; flex-direction: column; gap: 0; }
+.flow-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--blush);
+}
+.flow-step:last-child { border-bottom: none; }
+.step-num-circle {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--grad-btn);
+  color: #fff;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(160,104,130,0.3);
+}
+.step-title { font-size: 15px; font-weight: 700; color: var(--deep); margin-bottom: 6px; }
+.step-desc { font-size: 13px; color: var(--text-mid); line-height: 1.75; }
+
+/* ── DIFF BOX ────────────────────────────────*/
+.diff-compare {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  margin-top: 28px;
+  align-items: start;
+}
+.diff-col-bad {
+  background: linear-gradient(160deg, #F0EEF4 0%, #E4DFE8 100%);
+  border-radius: 14px 0 0 14px;
+  padding: 28px 22px;
+}
+.diff-col-good {
+  background: var(--grad-rose-dk);
+  border-radius: 0 14px 14px 0;
+  padding: 28px 22px;
+  position: relative;
+  overflow: hidden;
+}
+.diff-col-good::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+}
+.diff-vs {
+  background: var(--deep);
+  color: var(--gold-lt);
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  align-self: center;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(201,168,108,0.3);
+}
+.diff-col-bad h3 { font-size: 12px; color: #888; margin-bottom: 14px; font-weight: 500; letter-spacing: 0.08em; }
+.diff-col-good h3 { font-size: 12px; color: var(--gold-lt); margin-bottom: 14px; font-weight: 500; letter-spacing: 0.08em; }
+.diff-col-bad ul { list-style: none; }
+.diff-col-bad li { font-size: 13px; color: #888; padding: 6px 0; display: flex; gap: 8px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.diff-col-bad li:last-child { border-bottom: none; }
+.diff-col-bad li::before { content: '×'; color: #ccc; }
+.diff-col-good ul { list-style: none; }
+.diff-col-good li { font-size: 13px; color: #fff; padding: 6px 0; display: flex; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.diff-col-good li:last-child { border-bottom: none; }
+.diff-col-good li::before { content: '◎'; color: var(--gold-lt); }
+
+/* ── MISSION ─────────────────────────────────*/
+.mission-text {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+.mission-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  line-height: 2;
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+/* ── FINAL CTA ───────────────────────────────*/
+.final-cta-section {
+  background: linear-gradient(160deg, var(--pearl) 0%, var(--blush) 100%);
+  padding: 90px 0 130px;
+  text-align: center;
+}
+.final-cta-section h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--deep);
+  line-height: 1.75;
+  margin: 10px 0 16px;
+  letter-spacing: 0.03em;
+}
+.final-cta-section p {
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 2;
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+.final-badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.final-badge {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid var(--blush-md);
+  color: var(--text-mid);
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 5px 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* ── PHOTO ROWS ──────────────────────────────*/
+.photo-row-wide {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+.photo-row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+/* ── RESPONSIVE ──────────────────────────────*/
+@media (max-width: 640px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-photo { height: 280px; border-radius: 14px; }
+  .hero-copy { padding-bottom: 0; }
+  .hero { padding-bottom: 48px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .pillars-grid { grid-template-columns: 1fr 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .founder-wrap { grid-template-columns: 1fr; }
+  .diff-compare { grid-template-columns: 1fr; gap: 8px; }
+  .diff-col-bad, .diff-col-good { border-radius: 14px; }
+  .diff-vs { display: none; }
+  .photo-row-wide, .photo-row-3 { grid-template-columns: 1fr; }
+  .reason-grid { grid-template-columns: 1fr; }
+  .sticky-bar span { display: none; }
+  .hero h1 { font-size: 40px; }
+  .hero-sub { font-size: 20px; }
+  .transform-flow { gap: 6px; }
+}
+
+.cv-short-card {
+  background: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 3px 16px rgba(160,104,130,0.10);
+  position: relative;
+}
+.cv-short-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 0.5px;
+  background: linear-gradient(135deg, #C9A86C 0%, #D4A8BE 50%, #C97A98 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.cv-short-card .cv-stars {
+  font-size: 13px;
+  color: #C9A86C;
+  line-height: 1;
+}
+.cv-result-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(201,122,152,0.30) 0%, rgba(160,104,130,0.30) 50%, rgba(201,168,108,0.30) 100%);
+  color: #7A1F35;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: 20px;
+  align-self: flex-start;
+  border: 0.5px solid rgba(201,122,152,0.4);
+}
+.cv-short-text {
+  font-size: 13px;
+  color: #2A1E26;
+  line-height: 1.9;
+  flex: 1;
+}
+.cv-short-text mark {
+  background: linear-gradient(to bottom, transparent 50%, rgba(201,168,108,0.45) 50%);
+  color: #5C3D00;
+  font-weight: 700;
+  border-radius: 0;
+  padding: 0 2px;
+  -webkit-text-fill-color: #5C3D00;
+}
+.cv-short-name {
+  font-size: 12px;
+  color: #2A1E26;
+  font-weight: 700;
+  border-top: 1px solid #EDD5E0;
+  padding-top: 8px;
+  letter-spacing: 0.04em;
+}
+
+
+.cv-photo-card {
+  background: #fff;
+  border: none;
+  border-radius: 16px;
+  overflow: visible;
+  position: relative;
+  box-shadow: 0 0 0 0.5px #D4A8BE, 0 4px 20px rgba(160,104,130,0.10);
+}
+.cv-photo-card .cv-photo-area {
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  height: 260px;
+}
+.photo-carousel{
+  position:relative;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.photo-track{
+  display:flex;
+  width:100%;
+  height:100%;
+  transition:transform .35s ease;
+}
+
+.photo-track img{
+  min-width:100%;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* tombol */
+
+/* ── photo swipe indicator ── */
+.photo-swipe-ui {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 0 10px;
+  background: linear-gradient(to top, rgba(30,18,28,0.55) 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+.photo-swipe-dots {
+  display: flex;
+  gap: 5px;
+}
+.photo-swipe-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  transition: background 0.25s, transform 0.25s;
+  flex-shrink: 0;
+}
+.photo-swipe-dot.active {
+  background: #fff;
+  transform: scale(1.35);
+}
+.photo-swipe-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.75);
+  font-weight: 400;
+  text-transform: uppercase;
+  animation: swipe-blink 2s ease-in-out infinite;
+}
+@keyframes swipe-blink {
+  0%, 100% { opacity: 0.75; }
+  50%       { opacity: 0.2; }
+}
+/* hide swipe label once user has swiped */
+.photo-carousel.swiped .photo-swipe-label { display: none; }
+/* hide ui when only 1 photo */
+.photo-carousel.single-photo .photo-swipe-ui { display: none; }
+.photo-carousel.single-photo .photo-arrow { display: none; }
+/* Photo inner arrow buttons */
+.photo-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  transition: opacity 0.2s;
+  padding: 0;
+}
+.photo-arrow:hover { opacity: 0.75; }
+.photo-arrow.prev { left: 10px; }
+.photo-arrow.next { right: 10px; }
+.cv-photo-card .cv-photo-body {
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  padding: 20px 20px 18px;
+  background: linear-gradient(160deg, #fff 0%, #fdf3f6 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cv-photo-card .cv-result-badge {
+  margin-bottom: 0 !important;
+  align-self: flex-start;
+}
+.cv-photo-card .testi-stars {
+  font-size: 13px;
+  color: #C9A86C;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.cv-photo-text {
+  font-size: 14px;
+  color: #2A1E26;
+  line-height: 1.85;
+  margin: 0;
+}
+.cv-photo-text mark {
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 192, 3, 0.417) 50%);
+  color: #5C3D00;
+  font-weight: 700;
+  border-radius: 0;
+  padding: 0 2px;
+  -webkit-text-fill-color: #5C3D00;
+}
+.cv-photo-card .cv-short-name {
+  font-size: 12px;
+  color: #2A1E26;
+  font-weight: 700;
+  border-top: 1px solid #EDD5E0;
+  padding-top: 10px;
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+
+
+/* ── CV SHORT CAROUSEL ───────────────────────*/
+.cv-short-outer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cv-short-outer .cv-short-wrap {
+  flex: 1;
+  min-width: 0;
+}
+.cv-short-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.cv-short-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.cv-short-page {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.cv-short-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 4px 2px;
+}
+/* Side arrow buttons for Part 1 CV */
+.cv-short-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--blush-md);
+  background: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mauve);
+  font-size: 16px;
+  transition: background 0.2s, box-shadow 0.2s;
+  z-index: 10;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(160,104,130,0.18);
+}
+.cv-short-arrow:hover { background: var(--blush); }
+
+.founder-wrap-new {
+  display: flex;
+  flex-direction: column;
+}
+.founder-copy-new {
+  columns: 2;           /* teks jadi 2 kolom di desktop */
+  column-gap: 40px;
+}
+.founder-copy-new h2 {
+  column-span: all;     /* judul tetap full width */
+  font-family: 'Noto Serif JP', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.7;
+  margin: 12px 0 20px;
+}
+.founder-copy-new p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.95;
+  margin-bottom: 14px;
+  font-weight: 300;
+}
+.founder-copy-new strong {
+  color: rgba(255,255,255,0.92);
+  font-weight: 500;
+}
+@media (max-width: 640px) {
+  .founder-copy-new {
+    columns: 1;         /* phone view kembali 1 kolom */
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══════════════════════════════════ -->
+<section class="hero">
+  <canvas id="hero-canvas"></canvas> 
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">大阪梅田 · トータルチェンジ痩身サロン</p>
+      <h1 class="serif">
+        痩せたいのに、<br>
+        <em>頑張れなくなった<br>あなたへ。</em>
+      </h1>
+      <p class="hero-desc">
+        仕事も、家庭も、子育ても全力のあなたへ。<br>
+        必要なのは「もっと努力」ではなく、<br>
+        まず一度、<strong><b>「整えること」</b></strong>かもしれません。
+      </p>
+      <a href="#contact" class="btn-cta">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        今すぐ初回体験を予約する
+      </a>
+      <span class="btn-cta-sub">初回体験「身体の人生会議」無料カウンセリング付き</span>
+    </div>
+  </div>  
+</section>
+
+<!-- ══ BADGES STRIP ════════════════════════════ -->
+<div class="badges-strip">
+  <div class="badges-row">
+    <span class="badge">✦ 12年の実績</span>
+    <span class="badge">✦ 3,000名越えサポート</span>
+    <span class="badge">✦ −10kg達成イベント毎年開催</span>
+    <span class="badge">✦ 口コミ ★5 大阪梅田</span>
+    <span class="badge">✦ リピート率90%超（11年連続）</span>
+  </div>
+</div>
+
+<!-- ══ STATS ══════════════════════════════════ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Narumiya の実績</span>
+      <h2>数字が証明する<br>12年間の本気</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-num">3,000名+</span>
+        <p class="stat-label">これまでのサポート実績数</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">90%超</span>
+        <p class="stat-label">リピート率（11年連続）</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">100%</span>
+        <p class="stat-label">一度の結果満足度</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PAIN ══════════════════════════════════ -->
+<section class="section section-pearl">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">あなたに当てはまりませんか？</span>
+      <h2>何度頑張っても続かないのは、<br>あなたのせいじゃない。</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-item"><div class="pain-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>何をしても痩せなかった経験がある</div>
+      <div class="pain-item"><div class="pain-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>ダイエットが続かず自分を責めてしまう</div>
+      <div class="pain-item"><div class="pain-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>仕事・家庭・子育てで自分がいつも後回し</div>
+      <div class="pain-item"><div class="pain-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>情報が多すぎて何が正しいかわからない</div>
+      <div class="pain-item"><div class="pain-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>昔より疲れが抜けなくなった</div>
+      <div class="pain-item"><div class="pain-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>鏡を見るたびに落ち込む</div>
+      <div class="pain-item"><div class="pain-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>本当は変わりたいと思っている</div>
+      <div class="pain-item"><div class="pain-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>痩せても、なぜか満たされない</div>
+    </div>
+    <div class="callout">
+      あなたが怠けているわけでも、意志が弱いわけでもありません。<br><br>
+      ここまで、<strong>誰かのために頑張り続けてきたから。</strong><br>
+      痩せないのではなく、<strong>整う余裕がなかっただけ</strong>です。
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY CAN'T LOSE WEIGHT ══════════════════ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">なぜ今まで痩せなかったのか</span>
+      <h2>「食べ過ぎ」「運動不足」が<br>原因とは限りません。</h2>
+      <div class="divider"></div>
+    </div>
+    <p style="text-align:center;font-size:14px;color:var(--text-mid);line-height:1.9;margin-bottom:32px;font-weight:300">
+      12年間、数えきれない女性の身体と向き合う中で、<br>
+      私たちはあることに気づきました。<br>
+      <strong style="color:var(--deep)">痩せない身体には、必ず理由があります。</strong>
+    </p>
+    <div class="reason-grid">
+      <div class="reason-item"><div class="reason-num">01</div><div class="reason-title">骨格の歪み・姿勢の崩れ</div><p class="reason-body">骨格が歪むと代謝が落ち、どれだけ運動しても効果が出にくくなります。</p></div>
+      <div class="reason-item"><div class="reason-num">02</div><div class="reason-title">内臓機能・巡りの低下</div><p class="reason-body">内臓が疲弊すると消化・排泄・ホルモンバランスが崩れ、体重が落ちにくくなります。</p></div>
+      <div class="reason-item"><div class="reason-num">03</div><div class="reason-title">睡眠不足・慢性的な疲労</div><p class="reason-body">睡眠の質が下がると食欲ホルモンが乱れ、代謝低下につながります。</p></div>
+      <div class="reason-item"><div class="reason-num">04</div><div class="reason-title">自分を後回しにする毎日</div><p class="reason-body">慢性的なストレスは脂肪を蓄積しやすくする。心が整わないと体も整いません。</p></div>
+    </div>
+    <div class="callout" style="margin-top:24px">
+      つまり、痩せないのではなく、<strong>「整う余裕がなかっただけ」</strong>なのです。<br>
+      必要なのはもっと努力することではなく、一度立ち止まり、整えることです。
+    </div>
+  </div>
+</section>
+
+<!-- ══ PHOTO ROW ════════════════════════════ -->
+<section style="padding:32px 0;background:var(--pearl)">
+  <div class="container">
+    <div class="photo-row-wide">
+      <div style="height:300px;border-radius:14px;overflow:hidden;border:1px solid var(--blush)">
+        <img src="narumiya-8.jpg" alt="Foto" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="height:300px;border-radius:14px;overflow:hidden;border:1px solid var(--blush)">
+        <img src="narumiya-7.jpg" alt="Foto" style="width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+</section>
+
+<!-- ══ PILLARS ════════════════════════════════ -->
+<section class="section section-blush">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Narumiya が大切にすること</span>
+      <h2>骨格・内臓・習慣・心まで<br>トータルで「整える」</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card"><div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4c0 2.5-4 6-4 6S8 8.5 8 6a4 4 0 0 1 4-4z"/><path d="M12 12v10M8 16l4 2 4-2"/></svg></div><div class="pillar-title">骨格を整える</div><p class="pillar-body">代謝が上がる身体の土台を作ります</p></div>
+      <div class="pillar-card"><div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 21C7 17 3 13.5 3 9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4.5-4 8-9 12z"/></svg></div><div class="pillar-title">内臓を整える</div><p class="pillar-body">消化・ホルモンバランスを内側から整えます</p></div>
+      <div class="pillar-card"><div class="pillar-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2"/></svg></div><div class="pillar-title">生活習慣を整える</div><p class="pillar-body">食事・睡眠を無理なく変えていきます</p></div>
+      <div class="pillar-card"><div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="pillar-title">心・言葉を整える</div><p class="pillar-body">自分に向ける言葉が変わると人生が変わります</p></div>
+      <div class="pillar-card"><div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg></div><div class="pillar-title">在り方を整える</div><p class="pillar-body">自分を大切にできる生き方へ寄り添います</p></div>
+      <div class="pillar-card" style="background:var(--grad-btn);border-color:transparent"><div class="pillar-icon" style="background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.3)"><svg viewBox="0 0 24 24" style="stroke:#fff"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="pillar-title" style="color:#fff">全てが整うと</div><p class="pillar-body" style="color:rgba(255,255,255,0.8)">人生が変わる。それがNarumiyaです。</p></div>
+    </div>
+    <div class="transform-flow">
+      <span class="flow-node">身体が整う</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-node">心が整う</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-node">言葉が変わる</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-node-final">人生が変わる</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ TESTIMONIALS ════════════════════════════ -->
+<section class="section section-white" style="
+  background-image: url('narumiya-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+">
+  <div style="
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(231, 231, 231, 0.92) 0%,
+      rgba(236, 199, 215, 0.75) 100%
+    );
+    z-index: 0;
+  "></div>
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section-header">
+      <span class="tag">お客様の声</span>
+      <h2>「変わった」のは<br>身体だけじゃなかった。</h2>
+      <div class="divider"></div>
+    </div>
+
+    <!-- ── HIGHLIGHT QUOTE ── -->
+    <div class="testi-highlight">
+      <p>「支えてくれるみんなのためにと人生走り続けてきましたが、<strong>初めて自分のために頑張ることができました。</strong>」</p>
+      <span>— 川本あやか様 / 3児のお母様</span>
+    </div>
+
+    
+    <!-- ════════════════════════════════════════
+         PART 1: CV 短縮版 — カルーセル (4枚×3ページ)
+    ════════════════════════════════════════ -->
+    <div style="margin-top:40px">
+      <p style="display:none">Customer Voice — Photo</p>
+
+      <!-- Carousel wrapper -->
+      <div class="cv-short-outer">
+        <button class="cv-short-arrow prev" id="cvShortPrev" aria-label="前へ">&#8592;</button>
+      <div class="cv-short-wrap">
+        <div class="cv-short-track" id="cvShortTrack">
+
+        <!-- Page 1 -->
+        <div class="cv-short-page">
+          <div class="cv-short-grid">
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">−7.9kg</div>
+              <p class="cv-short-text">「行くだけで元気がもらえるパワースポット。スタッフ皆さんがどんな自分も受け入れて、今の自分を肯定してくれる。」</p>
+              <span class="cv-short-name">M様 / 結婚式に向けて</span>
+            </div>
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">−16kg / 13ヶ月</div>
+              <p class="cv-short-text">「今まで着れなかった服も、自分の好きな服も着れるようになって本当に良いことばかり。」</p>
+              <span class="cv-short-name">井田歩実様</span>
+            </div>
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">5児の母</div>
+              <p class="cv-short-text">「職場や周りの人に『可愛くなった』と言われることが増えて、ニタッとしてしまう毎日です。」</p>
+              <span class="cv-short-name">松本理子様</span>
+            </div>
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">8年以上</div>
+              <p class="cv-short-text">「8年以上通わせていただいて10周年の節目に受賞。Narumiyaの皆さんへ感謝の思いを形で伝えられました。」</p>
+              <span class="cv-short-name">8年以上のリピーター様</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="cv-short-page">
+          <div class="cv-short-grid">
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">体型・心まで</div>
+              <p class="cv-short-text">「綺麗な体型になれないと諦めかけていた私に、変わるきっかけをくれた。身体だけでなく心まで癒していただいています。」</p>
+              <span class="cv-short-name">森本あかり様</span>
+            </div>
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">8年継続</div>
+              <p class="cv-short-text">「スタイルを長年維持できているのも、最高のパートナーと出逢えたのも、Narumiyaが私の人生を大きく変えてくれました！」</p>
+              <span class="cv-short-name">財前さき様</span>
+            </div>
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">−9kg / 半年</div>
+              <p class="cv-short-text">「3人目の産後なかなか痩せられなかったところから、半年で−9kg。自愛することの大切さを教えてくれたNarumiyaです。」</p>
+              <span class="cv-short-name">川本あやか様 / 3児の母</span>
+            </div>
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">−8.7kg / 半年</div>
+              <p class="cv-short-text">「無理なダイエットではなく、自然と整っていき、本来の自分に戻るためのプロセスが全て詰まっています。」</p>
+              <span class="cv-short-name">井上あやか様</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="cv-short-page">
+          <div class="cv-short-grid">
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">11年のご縁</div>
+              <p class="cv-short-text">「11年前から変わらない、なるちゃんのお客様やスタッフへの温かな思いに、ずっと心を打たれています。」</p>
+              <span class="cv-short-name">佐山利江様</span>
+            </div>
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">−16.1kg / 8ヶ月</div>
+              <p class="cv-short-text">「Narumiyaとの出会いで、見た目だけでなく人生が変わるきっかけをいただきました。」</p>
+              <span class="cv-short-name">森岡りか様</span>
+            </div>
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">−8.2kg</div>
+              <p class="cv-short-text">「人生の節目を支えてくれて、一緒に泣いて笑ってくれる。言葉では言い尽くせないほどNarumiyaが大好きです。」</p>
+              <span class="cv-short-name">六井わかな様 / 結婚式に向けて</span>
+            </div>
+            <div class="cv-short-card">
+              <div class="cv-stars">★★★★★</div>
+              <div class="cv-result-badge">産後ダイエット</div>
+              <p class="cv-short-text">「仕事をしている私、母である私、すべての私の話をいつも親身に聞いて寄り添ってくれるスタッフの皆様には感謝しかありません。」</p>
+              <span class="cv-short-name">永徳まい様</span>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+        <button class="cv-short-arrow next" id="cvShortNext" aria-label="次へ">&#8594;</button>
+      </div><!-- /cv-short-outer -->
+
+      <!-- Dots nav -->
+      <div class="carousel-nav" style="margin-top:16px">
+        <div class="carousel-dots" id="cvShortDots"></div>
+      </div>
+    </div>
+
+    <script>
+    (function(){
+      const track = document.getElementById('cvShortTrack');
+      const dotsWrap = document.getElementById('cvShortDots');
+      const pages = track.querySelectorAll('.cv-short-page');
+      let cur = 0;
+      const total = pages.length;
+
+      pages.forEach((_,i) => {
+        const d = document.createElement('div');
+        d.className = 'carousel-dot' + (i===0?' active':'');
+        d.onclick = () => goTo(i);
+        dotsWrap.appendChild(d);
+      });
+
+      function goTo(n) {
+        cur = (n + total) % total;
+        track.style.transform = `translateX(-${cur * 100}%)`;
+        dotsWrap.querySelectorAll('.carousel-dot').forEach((d,i) => d.classList.toggle('active', i===cur));
+      }
+
+      document.getElementById('cvShortPrev').onclick = () => goTo(cur-1);
+      document.getElementById('cvShortNext').onclick = () => goTo(cur+1);
+    })();
+    </script>
+
+    <!-- ════════════════════════════════════════
+         PART 2: CV 写真付き carousel (rebuilt)
+    ════════════════════════════════════════ -->
+    <div style="margin-top:56px">
+      <div class="carousel-wrap">
+        <div class="carousel-track" id="testiTrack">
+
+          <!-- ── Slide 1: 日置未夢様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="日置未夢様-1.png" alt="日置未夢様 ビフォーアフター 1">
+                    <img src="日置未夢様-2.png" alt="日置未夢様 ビフォーアフター 2">
+                    <img src="日置未夢様-3.png" alt="日置未夢様 ビフォーアフター 1">
+                    <img src="日置未夢様-4.png" alt="日置未夢様 ビフォーアフター 2">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">−7.9kg / 結婚式に向けて</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「行くだけで元気がもらえる<mark>パワースポット</mark>。スタッフ皆さんがどんな自分も受け入れて、今の自分を肯定してくれる。いつしか<mark>Narumiyaに行くのが私の毎月の楽しみ</mark>になっていました。」</p>
+                <span class="cv-short-name">M様</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 2: 井田歩実様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="井田歩実様-1.png" alt="井田歩実様 ビフォーアフター 1">
+                    <img src="井田歩実様-2.png" alt="井田歩実様 ビフォーアフター 2">
+                    <img src="井田歩実様-3.png" alt="井田歩実様 ビフォーアフター 3">
+                    <img src="井田歩実様-4.png" alt="井田歩実様 ビフォーアフター 3">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">−16kg / 13ヶ月</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「絶対に痩せて見返す！と決意し<mark>13ヶ月でマイナス16キロ</mark>。そうなれたのもNarumiyaのみんなが<mark>『歩実さんなら大丈夫です』</mark>と言ってサポートし続けてくれたからです。」</p>
+                <span class="cv-short-name">井田歩実様</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 3: 松本理子様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="松本理子様-1.png" alt="松本理子様 ビフォーアフター 1">
+                    <img src="松本理子様-2.png" alt="松本理子様 ビフォーアフター 2">
+                    <img src="松本理子様-3.png" alt="松本理子様 ビフォーアフター 3">
+                    <img src="松本理子様-4.png" alt="松本理子様 ビフォーアフター 4">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">5児の母</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「5人の母で、いつもは子供のためにと過ごす日々。<mark>自分の為に輝かせてもらえるステージ</mark>がNarumiyaです。最近は職場や周りの人に<mark>可愛くなったと言われることが増えて</mark>、ニタッとしてしまう毎日。」</p>
+                <span class="cv-short-name">松本理子様</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 4: 川本あやか様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="川本あやか様-3.png" alt="川本あやか様 ビフォーアフター 1">
+                    <img src="川本あやか様-2.png" alt="川本あやか様 ビフォーアフター 2">
+                    <img src="川本あやか様-1.png" alt="川本あやか様 ビフォーアフター 3">
+                    <img src="川本あやか様-4.png" alt="川本あやか様 ビフォーアフター 4">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">−9kg / 半年 / 3児の母</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「3人目の産後なかなか痩せられなかったところから、<mark>半年で−9kg。</mark>自愛することの大切さを教えてくれたNarumiyaです。<mark>自分の為の挑戦ができたことに心から感謝申し上げます。</mark>」</p>
+                <span class="cv-short-name">川本あやか様</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 5: 森岡りか様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="森岡りか様-1.png" alt="森岡りか様 ビフォーアフター 1">
+                    <img src="森岡りか様-2.png" alt="森岡りか様 ビフォーアフター 2">
+                    <img src="森岡りか様-3.png" alt="森岡りか様 ビフォーアフター 3">
+                    <img src="森岡りか様-4.png" alt="森岡りか様 ビフォーアフター 4">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">−16.1kg / 8ヶ月</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「ここまでキレイに痩せれると思っていなかったからこそ嬉しくて<mark>スタッフの方と一緒に涙して</mark>自分の変化に喜びました。Narumiyaとの出会いで、<mark>見た目だけでなく人生変わるきっかけを頂けました。</mark>」</p>
+                <span class="cv-short-name">森岡りか様</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 6: 後藤由紀子様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="後藤由紀子様-1.png" alt="後藤由紀子様 ビフォーアフター 1">
+                    <img src="後藤由紀子様-2.png" alt="後藤由紀子様 ビフォーアフター 2">
+                    <img src="後藤由紀子様-3.png" alt="後藤由紀子様 ビフォーアフター 3">
+                    <img src="後藤由紀子様-4.png" alt="後藤由紀子様 ビフォーアフター 4">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">−19kg / 8ヶ月 / 40代</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「子供もいて<mark>40歳すぎで綺麗になるのは無理だと思っていたのに</mark>、気持ちを甦らしてくれたのはNarumiyaでした。<mark>1年経っても体型はキープしています。</mark>」</p>
+                <span class="cv-short-name">後藤由紀子様</span>
+              </div>
+            </div>
+          </div>
+
+                    <!-- ── Slide 7: 匿名様（8年以上）
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="images/anon8y-1.jpg" alt="8年以上のリピーター様">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">8年以上のリピーター</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「8年以上通わせていただいて、<mark>10周年という節目に受賞。</mark>Narumiyaの皆さんへ<mark>感謝の思いを形で伝えられました。</mark>」</p>
+                <span class="cv-short-name">匿名様（8年以上）</span>
+              </div>
+            </div>
+          </div>   ── -->
+
+          <!-- ── Slide 8: 森本あかり様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="森本あかり様-1.png" alt="森本あかり様">
+                    <img src="森本あかり様-2.png" alt="森本あかり様">
+                    <img src="森本あかり様-3.png" alt="森本あかり様">
+                    <img src="森本あかり様-4.png" alt="森本あかり様">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">体型・心まで</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「<mark>綺麗な体型になれないと諦めかけていた私に、変わるきっかけをくれた。</mark>身体だけではなく<mark>心まで癒していただいています。</mark>」</p>
+                <span class="cv-short-name">森本あかり様</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 9: 財前さき様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="財前さき様-1.png" alt="財前さき様">
+                    <img src="財前さき様-2.png" alt="財前さき様">
+                    <img src="財前さき様-3.png" alt="財前さき様">
+                    <img src="財前さき様-4.png" alt="財前さき様">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">8年継続</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「約8年、<mark>スタイルを長年維持できているのも、最高のパートナーと出逢えたのも、</mark>Narumiyaが<mark>私の人生を大きく変えてくれました！</mark>」</p>
+                <span class="cv-short-name">財前さき様</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 10: 井上あやか様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="井上あやか様-1.png" alt="井上あやか様">
+                    <img src="井上あやか様-2.png" alt="井上あやか様">
+                    <img src="井上あやか様-3.png" alt="井上あやか様">
+                    <img src="井上あやか様-4.png" alt="井上あやか様">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">−8.7kg / 半年</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「無理なダイエットではなく、<mark>自然と整っていき、無理なく半年で−8.7kg。</mark>本来の自分に戻るための<mark>プロセスが全て詰まっています。</mark>」</p>
+                <span class="cv-short-name">井上あやか様</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 11: 佐山利江様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="佐山利江様-1.png" alt="佐山利江様">
+                    <img src="佐山利江様-2.png" alt="佐山利江様">
+                    <img src="佐山利江様-3.png" alt="佐山利江様">
+                    <img src="佐山利江様-4.png" alt="佐山利江様">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">11年のリピーター</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「<mark>11年前から変わらない、なるちゃんのお客様やスタッフへの温かな思いに、</mark>ずっと<mark>心を打たれています。</mark>」</p>
+                <span class="cv-short-name">佐山利江様</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 12: 六井わかな様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="六井わかな様-3.png" alt="六井わかな様">
+                    <img src="六井わかな様-2.png" alt="六井わかな様">
+                    <img src="六井わかな様-1.png" alt="六井わかな様">
+                    <img src="六井わかな様-4.png" alt="六井わかな様">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">−8.2kg / 結婚式に向けて</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「人生の節目を支えてくれて、<mark>一緒に泣いて笑ってくれる。</mark>言葉では言い尽くせないほど<mark>Narumiyaが大好きです。</mark>」</p>
+                <span class="cv-short-name">六井わかな様</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 13: 永徳まい様 
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="images/noritoku-1.jpg" alt="永徳まい様">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">産後ダイエット成功</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「仕事をしている私、母である私、<mark>すべての私の話をいつも親身に聞いて寄り添ってくれる</mark>スタッフの皆様には<mark>感謝しかありません。</mark>」</p>
+                <span class="cv-short-name">永徳まい様</span>
+              </div>
+            </div>
+          </div> ── -->
+
+          <!-- ── Slide 14: 矢部公子様 ── -->
+          <div class="carousel-slide">
+            <div class="cv-photo-card">
+              <div class="cv-photo-area">
+                <div class="photo-carousel">
+                  <div class="photo-track">
+                    <img src="矢部公子様-1.png" alt="矢部公子様">
+                    <img src="矢部公子様-2.png" alt="矢部公子様">
+                    <img src="矢部公子様-3.png" alt="矢部公子様">
+                    <img src="矢部公子様-4.png" alt="矢部公子様">
+                  </div>
+                  <div class="photo-swipe-ui">
+                    <div class="photo-swipe-dots"></div>
+                    <span class="photo-swipe-label">スワイプ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-photo-body">
+                <div class="cv-result-badge">−9.5kg / 1年</div>
+                <div class="testi-stars">★★★★★</div>
+                <p class="cv-photo-text">「<mark>Narumiyaの皆さんを信じて良かった、</mark>とコツコツ努力を積み重ねた結果、<mark>1年でマイナス9.5kg。</mark>」</p>
+                <span class="cv-short-name">矢部公子様</span>
+              </div>
+            </div>
+          </div>
+
+
+        </div><!-- /carousel-track -->
+      </div><!-- /carousel-wrap -->
+
+      <!-- Navigation -->
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="testiPrev" aria-label="前のお客様">&#8592;</button>
+        <div class="carousel-dots" id="testiDots"></div>
+        <button class="carousel-btn" id="testiNext" aria-label="次のお客様">&#8594;</button>
+      </div>
+    </div>
+
+    <script>
+    /* ── Customer Voice Photo Carousel ── */
+    (function(){
+      var track = document.getElementById('testiTrack');
+      var dotsWrap = document.getElementById('testiDots');
+      var slides = track.querySelectorAll('.carousel-slide');
+      var current = 0;
+      var total = slides.length;
+
+      /* build dots */
+      slides.forEach(function(_,i){
+        var d = document.createElement('div');
+        d.className = 'carousel-dot' + (i===0?' active':'');
+        d.onclick = function(){ goTo(i); };
+        dotsWrap.appendChild(d);
+      });
+
+      function goTo(n){
+        current = (n + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dotsWrap.querySelectorAll('.carousel-dot').forEach(function(d,i){
+          d.classList.toggle('active', i===current);
+        });
+      }
+
+      document.getElementById('testiPrev').onclick = function(){ goTo(current-1); };
+      document.getElementById('testiNext').onclick = function(){ goTo(current+1); };
+
+      /* swipe support (outer carousel) */
+      var startX = 0;
+      track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+      track.addEventListener('touchend', function(e){
+        var diff = startX - e.changedTouches[0].clientX;
+        if(Math.abs(diff) > 40){ goTo(diff > 0 ? current+1 : current-1); }
+      }, {passive:true});
+    })();
+
+    /* ── Inner Photo Carousel (per card) ── */
+    document.querySelectorAll('.photo-carousel').forEach(function(carousel){
+      var track = carousel.querySelector('.photo-track');
+      var photos = carousel.querySelectorAll('.photo-track img');
+      var dotsWrap = carousel.querySelector('.photo-swipe-dots');
+      var cur = 0;
+
+      /* build inner dots + arrows */
+      if(photos.length <= 1){
+        carousel.classList.add('single-photo');
+      } else {
+        photos.forEach(function(_,i){
+          var d = document.createElement('div');
+          d.className = 'photo-swipe-dot' + (i===0 ? ' active' : '');
+          dotsWrap.appendChild(d);
+        });
+        /* create prev arrow */
+        var btnPrev = document.createElement('button');
+        btnPrev.className = 'photo-arrow prev';
+        btnPrev.innerHTML = '&#8592;';
+        btnPrev.setAttribute('aria-label', '前の写真');
+        carousel.appendChild(btnPrev);
+        /* create next arrow */
+        var btnNext = document.createElement('button');
+        btnNext.className = 'photo-arrow next';
+        btnNext.innerHTML = '&#8594;';
+        btnNext.setAttribute('aria-label', '次の写真');
+        carousel.appendChild(btnNext);
+        btnPrev.addEventListener('click', function(e){
+          e.stopPropagation();
+          cur = (cur - 1 + photos.length) % photos.length;
+          updatePhoto();
+        });
+        btnNext.addEventListener('click', function(e){
+          e.stopPropagation();
+          cur = (cur + 1) % photos.length;
+          updatePhoto();
+        });
+      }
+
+      function updatePhoto(){
+        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+        /* update active dot */
+        var dots = dotsWrap.querySelectorAll('.photo-swipe-dot');
+        dots.forEach(function(d,i){ d.classList.toggle('active', i===cur); });
+        /* hide swipe label after first interaction */
+        carousel.classList.add('swiped');
+      }
+
+      /* swipe support (inner photo) — touch */
+      var sx = 0;
+      track.addEventListener('touchstart', function(e){
+        sx = e.touches[0].clientX;
+        e.stopPropagation();
+      }, {passive:true});
+      track.addEventListener('touchend', function(e){
+        var diff = sx - e.changedTouches[0].clientX;
+        if(Math.abs(diff) > 30){
+          e.stopPropagation();
+          cur = diff > 0 ? (cur+1)%photos.length : (cur-1+photos.length)%photos.length;
+          updatePhoto();
+        }
+      }, {passive:true});
+
+      /* swipe support — mouse drag (desktop preview) */
+      var mx = 0, dragging = false;
+      track.addEventListener('mousedown', function(e){ mx = e.clientX; dragging = true; });
+      track.addEventListener('mouseup', function(e){
+        if(!dragging) return;
+        dragging = false;
+        var diff = mx - e.clientX;
+        if(Math.abs(diff) > 40){
+          cur = diff > 0 ? (cur+1)%photos.length : (cur-1+photos.length)%photos.length;
+          updatePhoto();
+        }
+      });
+      track.addEventListener('mouseleave', function(){ dragging = false; });
+
+      /* init — don't mark swiped yet so label blinks on load */
+    });
+    </script>
+
+  </div>
+</section>
+
+<!-- ══ STAFF PHOTO full width ══════════════════ -->
+<section style="padding:0;background:var(--deep)">
+  <div style="max-width:740px;margin:0 auto;padding:40px 24px">
+    <div class="photo-frame" style="height:360px;"><img src="all-staff.jpg" alt="Deskripsi Gambar"></div>
+       <p style="text-align:center;font-size:13px;color:rgba(255,255,255,0.45);margin-top:14px;letter-spacing:0.08em;font-weight:300">NARUMIYA STAFF — あなたの変化を、全力でサポートします</p>
+  </div>
+</section>
+
+<!-- ══ FOUNDER ════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="founder-wrap-new">
+      <div class="photo-frame" style="height:420px; margin-bottom:32px;">
+        <img src="profile.jpg" alt="成宮彩香">
+      </div>
+      <div class="founder-copy-new">
+        <span class="tag tag-dark">オーナーより</span>
+        <h2>Narumiya代表、成宮彩香より。</h2>
+        <p>24歳で大阪梅田に独立して以来、「ただ痩せるため」ではなく、女性の心と身体を整え、その先の人生まで軽やかにしていくことを大切に歩んできました。口コミだけで多くのお客様に支えていただき、<strong>11年連続リピート率90％超。</strong>10名の信頼できる仲間とともに、結果だけでなく、安心と希望までお渡しできる場所であり続けています。</p>
+        <p style="color:var(--gold-lt);font-weight:400">仕事・家事・育児と、誰かのために頑張り続ける毎日の中で、自分のことは後回しになりがちです。そんなあなたに、10年以上研究し続けた「骨格から整える360度オールハンド痩身」で、一度で身体の軽さとサイズダウンをご実感いただきながら、<strong>心にも身体にも余白を取り戻していただけたら嬉しいです。</strong>お会いできる日を、心より楽しみにしております。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FLOW STEPS ══════════════════════════════ -->
+<section class="section section-pearl">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">初回体験の流れ</span>
+      <h2>初回は「身体の人生会議」<br>あなたの全部を丁寧に見ます。</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="flow-steps">
+      <div class="flow-step"><div class="step-num-circle">1</div><div><p class="step-title">人生の棚卸しカウンセリング</p><p class="step-desc">これまでの生活・習慣・想いをじっくりヒアリング。あなたの人生ごと、丁寧に受け取ります。</p></div></div>
+      <div class="flow-step"><div class="step-num-circle">2</div><div><p class="step-title">身体チェック・ビフォー撮影</p><p class="step-desc">骨格・姿勢・巡りなど現状を正確に把握。変化を記録するためのビフォー撮影も行います。</p></div></div>
+      <div class="flow-step"><div class="step-num-circle">3</div><div><p class="step-title">BACK4施術</p><p class="step-desc">Narumiya独自の手技で骨格・筋肉・内臓・リンパにアプローチ。身体の奥から整えます。</p></div></div>
+      <div class="flow-step"><div class="step-num-circle">4</div><div><p class="step-title">Narumiya式 整形級痩身</p><p class="step-desc">12年の技術を集結した独自の痩身メソッド。一度で実感できる変化を体験してください。</p></div></div>
+      <div class="flow-step"><div class="step-num-circle">5</div><div><p class="step-title">変化確認・アフターカウンセリング</p><p class="step-desc">施術後の変化を確認し、あなただけのプランをご提案。次のステップを一緒に考えます。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PHOTO ROW 2 ══════════════════════════════ -->
+<section style="padding:32px 0;background:var(--white)">
+  <div class="container">
+    <div class="photo-row-3">
+      <div style="height:260px;border-radius:14px;overflow:hidden"><img src="narumiya-1.jpg" alt="Foto" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="height:260px;border-radius:14px;overflow:hidden"><img src="narumiya-6.jpg" alt="Foto" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="height:260px;border-radius:14px;overflow:hidden"><img src="narumiya-9.jpg" alt="Foto" style="width:100%;height:100%;object-fit:cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DIFF ════════════════════════════════════ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Narumiya が選ばれる理由</span>
+      <h2>99%の痩身サロンは<br>「痩せたら終わり」</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="diff-compare">
+      <div class="diff-col-bad"><h3>一般的な痩身サロン</h3><ul><li>痩せたら終わり</li><li>身体だけにアプローチ</li><li>施術中のみサポート</li><li>全員同じメニュー</li><li>再来店の理由がない</li></ul></div>
+      <div class="diff-vs">VS</div>
+      <div class="diff-col-good"><h3>Narumiya</h3><ul><li>人生の節目に帰ってくる場所</li><li>身体・心・習慣・言葉まで整える</li><li>生活・食事まで伴走サポート</li><li>一人ひとりに合わせたプラン</li><li>リピート率90%超（11年連続）</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MISSION ════════════════════════════════ -->
+<section class="section section-rose">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag tag-dark">私たちの使命</span>
+      <div class="divider"></div>
+    </div>
+    <p class="mission-text">「整えることで、<br>女性と施術者の人生を豊かにする」</p>
+    <p class="mission-sub">身体だけではありません。心も、習慣も、言葉も、人生も。<br>自分を整えた人が、また誰かを照らしていく。<br>そんな循環をつくることが、Narumiyaの使命です。</p>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ════════════════════════════════ -->
+<section class="final-cta-section" id="contact">
+  <div class="container">
+    <span class="tag">初回体験 受付中</span>
+    <h2>もう、自分を責める<br>ダイエットは終わりにしませんか？</h2>
+    <p>痩せたい。綺麗になりたい。でも本当は、<br>もっと軽やかに、自分らしく、人生を楽しみたい。<br>Narumiyaは、そんな女性のための場所です。</p>
+    <div class="final-badges">
+      <span class="final-badge">大阪梅田</span>
+      <span class="final-badge">無料カウンセリング付き</span>
+      <span class="final-badge">初回体験受付中</span>
+      <span class="final-badge">口コミ ★5</span>
+    </div>
+    <a href="#" class="btn-cta" style="font-size:16px;padding:18px 52px">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      今すぐ初回体験を予約する
+    </a>
+
+    <!-- LINE button (hidden - uncomment to enable)
+    <div>
+      <div style="margin-top:16px;display:flex;align-items:center;gap:12px;justify-content:center">
+        <div style="height:1px;width:48px;background:var(--blush-md);"></div>
+        <span style="font-size:12px;color:var(--text-mid);letter-spacing:0.06em">または</span>
+        <div style="height:1px;width:48px;background:var(--blush-md);"></div>
+      </div>
+      <a href="#" style="display:inline-flex;align-items:center;gap:12px;margin-top:14px;background:linear-gradient(135deg,#3EC75A 0%,#EDD5E0 65%,#F5F0F4 100%);color:#2A1E26;text-decoration:none;border-radius:50px;padding:15px 40px;font-size:15px;font-weight:700;letter-spacing:0.05em;box-shadow:0 4px 20px rgba(62,199,90,0.2);position:relative;overflow:hidden;transition:transform 0.15s,box-shadow 0.15s;">
+        <span style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.18) 0%,transparent 60%);border-radius:inherit;pointer-events:none"></span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0">
+          <rect width="24" height="24" rx="6" fill="rgba(255,255,255,0.2)"/>
+          <path d="M12 4C7.582 4 4 7.12 4 10.98c0 2.5 1.66 4.7 4.16 5.98-.18.66-.66 2.4-.76 2.76-.12.44.16.44.34.32.14-.1 2.24-1.52 3.14-2.14.36.04.72.06 1.12.06 4.418 0 8-3.12 8-6.98C20 7.12 16.418 4 12 4z" fill="white"/>
+        </svg>
+        LINEで簡単30秒予約
+      </a>
+      <span style="display:block;font-size:11px;color:var(--text-mid);margin-top:8px;letter-spacing:0.04em">友だち追加 → メッセージを送るだけ</span>
+    </div>
+    -->
+
+    <div style="text-align:center;padding:24px 0 32px;display:flex;justify-content:center;gap:24px">
+      <a href="#" target="_blank" style="font-size:12px;color:var(--mauve);text-decoration:underline;opacity:0.7">プライバシーポリシー</a>
+      <a href="#" target="_blank" style="font-size:12px;color:var(--mauve);text-decoration:underline;opacity:0.7">利用規約</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ══ STICKY BAR ══════════════════════════════ -->
+<div class="sticky-bar" id="stickyBar">
+  <span>初回体験「身体の人生会議」受付中</span>
+  <a href="#contact" class="btn-cta">
+    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    今すぐ予約する
+  </a>
+</div>
+
+<script>
+  const bar = document.getElementById('stickyBar');
+  const target = document.getElementById('contact');
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      bar.style.transition = 'opacity 0.3s, transform 0.3s';
+      if (entry.isIntersecting) {
+        bar.style.opacity = '0';
+        bar.style.transform = 'translateY(100%)';
+        bar.style.pointerEvents = 'none';
+      } else {
+        bar.style.opacity = '1';
+        bar.style.transform = 'translateY(0)';
+        bar.style.pointerEvents = 'auto';
+      }
+    },
+    { threshold: 0.1 }
+  );
+  observer.observe(target);
+
+  /* bintang animasi */
+
+  (function(){
+  var canvas = document.getElementById('hero-canvas');
+  var ctx = canvas.getContext('2d');
+  var hero = document.querySelector('.hero');
+  var stars = [], animId;
+  var COUNT = 55, DIST = 130, SPD = 3, SMAX = 2, LOP = 0.25;
+
+  function resize(){
+    canvas.width  = hero.offsetWidth;
+    canvas.height = hero.offsetHeight;
+  }
+  function mkStar(){
+    return {
+      x: Math.random()*canvas.width,
+      y: Math.random()*canvas.height,
+      vx:(Math.random()-.5)*SPD*.1,
+      vy:(Math.random()-.5)*SPD*.1,
+      r: Math.random()*SMAX+.5,
+      tw:Math.random()*Math.PI*2,
+      ts:.01+Math.random()*.03
+    };
+  }
+  function init(){ stars=[]; for(var i=0;i<COUNT;i++) stars.push(mkStar()); }
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    var W=canvas.width, H=canvas.height;
+    for(var i=0;i<stars.length;i++){
+      var a=stars[i];
+      a.x+=a.vx; a.y+=a.vy;
+      if(a.x<-10)a.x=W+10; if(a.x>W+10)a.x=-10;
+      if(a.y<-10)a.y=H+10; if(a.y>H+10)a.y=-10;
+      a.tw+=a.ts;
+      for(var j=i+1;j<stars.length;j++){
+        var b=stars[j];
+        var dx=a.x-b.x,dy=a.y-b.y;
+        var d=Math.sqrt(dx*dx+dy*dy);
+        if(d<DIST){
+          var op=(1-d/DIST)*LOP;
+          ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
+          ctx.strokeStyle='rgba(201,168,108,'+op+')';
+          ctx.lineWidth=.5;ctx.stroke();
+        }
+      }
+    }
+    for(var i=0;i<stars.length;i++){
+      var s=stars[i];
+      var br=.6+.4*Math.sin(s.tw);
+      ctx.beginPath();
+      ctx.arc(s.x,s.y,s.r*br,0,Math.PI*2);
+      ctx.fillStyle='rgba(240,222,184,'+br+')';
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  resize(); init(); draw();
+  window.addEventListener('resize', resize);
+})();
+
+</script>
+
+</body>
+</html>
