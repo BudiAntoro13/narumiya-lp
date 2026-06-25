@@ -40,6 +40,7 @@
 }
 
 html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; max-width: 100%; }
 body {
   font-family: 'Noto Sans JP', sans-serif;
   background: var(--pearl);
@@ -144,6 +145,8 @@ body, html {
 
 /* ── HERO ──────────────────────────────────── */
 .hero {
+    position: relative;
+    overflow: hidden;
     background: 
     linear-gradient(160deg, rgba(121, 111, 133, 0.85) 0%, rgba(255, 255, 255, 0.85) 50%, rgba(220, 152, 206, 0.85) 100%),
     url('all-staff.jpg') center/cover no-repeat;
@@ -834,6 +837,9 @@ body, html {
   .hero h1 { font-size: 40px; }
   .hero-sub { font-size: 20px; }
   .transform-flow { gap: 6px; }
+  /* phone: hide carousel side/nav arrows, keep dots */
+  /*.carousel-btn { display: none !important; }*/
+  .cv-short-arrow { display: none !important; }
 }
 
 .cv-short-card {
