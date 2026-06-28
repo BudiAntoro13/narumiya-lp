@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Narumiya — 大阪梅田のトータルチェンジ痩身サロン。骨格・内臓・習慣・心まで整える独自メソッドで、12年の実績。初回体験受付中。">
+<meta name="description" content="Narumiya — 大阪梅田・トータルチェンジ痩身サロン。骨格・内臓・習慣・心まで整える独自メソッドで、12年の実績。初回体験受付中。">
 <title>Narumiya — トータルチェンジ痩身サロン | 大阪梅田</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap&font-display=swap" rel="stylesheet">
@@ -312,8 +312,8 @@ body, html {
 /* ── STATS ─────────────────────────────────── */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
 .stat-card {
   text-align: center;
@@ -335,6 +335,7 @@ body, html {
 .stat-num {
   font-family: 'Noto Serif JP', serif;
   font-size: 34px;
+  white-space: nowrap;
   font-weight: 600;
   display: block;
   line-height: 1.1;
@@ -784,7 +785,7 @@ body, html {
   font-size: 15px;
   color: var(--text-mid);
   line-height: 2;
-  margin-bottom: 36px;
+  margin-bottom: 0px;
   font-weight: 300;
 }
 .final-badges {
@@ -815,6 +816,13 @@ body, html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 14px;
+}
+
+@media (max-width: 640px){
+  .pc-br{ display: none; }
+}
+@media (min-width: 641px){
+  .sp-br{ display: none; }
 }
 
 /* ── RESPONSIVE ──────────────────────────────*/
@@ -1146,13 +1154,13 @@ body, html {
   <canvas id="hero-canvas"></canvas> 
   <div class="hero-inner">
     <div class="hero-copy">
-      <p class="hero-eyebrow">大阪梅田 · トータルチェンジ痩身サロン</p>
+      <p class="hero-eyebrow">大阪梅田・トータルチェンジ<br class="sp-br">痩身サロン</p>
       <h1 class="serif">
         痩せたいのに、<br>
         <em>頑張れなくなった<br>あなたへ。</em>
       </h1>
       <p class="hero-desc">
-        仕事も、家庭も、子育ても全力のあなたへ。<br>
+        仕事も、家庭も子育ても<br class="sp-br">全力なあなたへ。<br>
         必要なのは「もっと努力」ではなく、<br>
         まず一度、<strong><b>「整えること」</b></strong>かもしれません。
       </p>
@@ -1186,8 +1194,8 @@ body, html {
     </div>
     <div class="stats-grid">
       <div class="stat-card">
-        <span class="stat-num">3,000名+</span>
-        <p class="stat-label">これまでのサポート実績数</p>
+        <span class="stat-num">3,000名超</span>
+        <p class="stat-label">これまでのサポート<br class="sp-br">実績数</p>
       </div>
       <div class="stat-card">
         <span class="stat-num">90%超</span>
@@ -1196,6 +1204,10 @@ body, html {
       <div class="stat-card">
         <span class="stat-num">100%</span>
         <p class="stat-label">一度の結果満足度</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">★5.0</span>
+        <p class="stat-label">口コミ評価（大阪梅田）</p>
       </div>
     </div>
   </div>
@@ -1219,11 +1231,11 @@ body, html {
       <div class="pain-item"><div class="pain-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>本当は変わりたいと思っている</div>
       <div class="pain-item"><div class="pain-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>痩せても、なぜか満たされない</div>
     </div>
-    <div class="callout">
-      あなたが怠けているわけでも、意志が弱いわけでもありません。<br><br>
-      ここまで、<strong>誰かのために頑張り続けてきたから。</strong><br>
-      痩せないのではなく、<strong>整う余裕がなかっただけ</strong>です。
-    </div>
+      <div class="callout">
+        あなたが怠けているわけでも、<br class="sp-br">意志が弱いわけでもありません。<br><br>
+        ここまで、<strong>誰かのために<br class="sp-br">頑張り続けてきたから。</strong><br>
+        痩せないのではなく、<br class="sp-br"><strong>整う余裕がなかっただけ</strong>です。
+      </div>
   </div>
 </section>
 
@@ -1247,7 +1259,7 @@ body, html {
       <div class="reason-item"><div class="reason-num">04</div><div class="reason-title">自分を後回しにする毎日</div><p class="reason-body">慢性的なストレスは脂肪を蓄積しやすくする。心が整わないと体も整いません。</p></div>
     </div>
     <div class="callout" style="margin-top:24px">
-      つまり、痩せないのではなく、<strong>「整う余裕がなかっただけ」</strong>なのです。<br>
+      つまり、痩せないのではなく、<strong>「整う余裕がなかっただけ」</strong><br>
       必要なのはもっと努力することではなく、一度立ち止まり、整えることです。
     </div>
   </div>
@@ -2042,8 +2054,8 @@ body, html {
       <span class="tag tag-dark">私たちの使命</span>
       <div class="divider"></div>
     </div>
-    <p class="mission-text">「整えることで、<br>女性と施術者の人生を豊かにする」</p>
-    <p class="mission-sub">身体だけではありません。心も、習慣も、言葉も、人生も。<br>自分を整えた人が、また誰かを照らしていく。<br>そんな循環をつくることが、Narumiyaの使命です。</p>
+    <p class="mission-text">「整えることで、<br>女性と施術者の人生を<br class="sp-br">豊かにする」</p>
+    <p class="mission-sub">身体だけではありません。<br class="sp-br">心も、習慣も、言葉も、人生も。<br>自分を整えた人が、また誰かを照らしていく。<br>そんな循環をつくることが、Narumiyaの使命です。</p>
   </div>
 </section>
 
@@ -2051,7 +2063,7 @@ body, html {
 <section class="final-cta-section" id="contact">
   <div class="container">
     <span class="tag">初回体験 受付中</span>
-    <h2>もう、自分を責める<br>ダイエットは終わりにしませんか？</h2>
+    <h2>もう、自分を責める<br>ダイエットは<br class="sp-br">終わりにしませんか？</h2>
     <p>痩せたい。綺麗になりたい。でも本当は、<br>もっと軽やかに、自分らしく、人生を楽しみたい。<br>Narumiyaは、そんな女性のための場所です。</p>
     <div class="final-badges">
       <span class="final-badge">大阪梅田</span>
@@ -2084,8 +2096,8 @@ body, html {
     -->
 
     <div style="text-align:center;padding:24px 0 32px;display:flex;justify-content:center;gap:24px">
-      <a href="#" target="_blank" style="font-size:12px;color:var(--mauve);text-decoration:underline;opacity:0.7">プライバシーポリシー</a>
-      <a href="#" target="_blank" style="font-size:12px;color:var(--mauve);text-decoration:underline;opacity:0.7">特商法</a>
+      <a href="#" target="blank" style="font-size:12px;color:var(--mauve);text-decoration:underline;opacity:0.7">プライバシーポリシー</a>
+      <a href="#" target="blank" style="font-size:12px;color:var(--mauve);text-decoration:underline;opacity:0.7">特商法</a>
     </div>
   </div>
 </section>
